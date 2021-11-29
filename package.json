@@ -2,16 +2,18 @@
   "name": "nodejs-basic-repo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "apis/server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "nodemon Student.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mssql": "^7.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
