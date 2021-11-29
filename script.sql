@@ -24,3 +24,5 @@ INSERT INTO Student (Name, Email, city) VALUES ('Scott', 'scott@ef.com', 'Boston
 Update Student SET Name='Umesh', Email='umesh@ef.com', City ='Hyd' WHERE Id =4 -- UPDATE
 
 DELETE FROM Student WHERE Id = 6 -- DELETE
+
+SELECT * FROM Student  WHERE Id=4 -- Get Student by Id
