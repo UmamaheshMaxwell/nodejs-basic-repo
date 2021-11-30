@@ -1,14 +1,11 @@
 const express = require("express")
-const app = express()
-const router = express.Router();
-const cors = require("cors")
 const sql = require("mssql")
 
 const dbConfig = require("./Config")
 
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
+const router = express.Router();
+
+
 
 router.get("/", (request, response) => {
     response.json({message: 'Welcome to NodeJS API'})
@@ -48,6 +45,7 @@ router.get("/student/:id", (request, response) => {
 })
 
 router.post("/student", (request, response) => {
+    console.log(request.body)
     const body = request.body
     const {Name, Email, City} = body
     sql.connect(dbConfig, (err) => {
